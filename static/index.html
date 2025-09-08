@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raspberry Pi Camera Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 40px; }
+        #photo { max-width: 90vw; max-height: 60vh; border: 1px solid #ccc; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>Raspberry Pi Camera Demo</h1>
+    <button onclick="takePhoto()">Take Photo</button>
+    <div>
+        <img id="photo" src="" alt="Photo will appear here" />
+    </div>
+    <script>
+        function takePhoto() {
+            const img = document.getElementById('photo');
+            img.src = '/capture?' + Date.now(); // Prevent caching
+        }
+    </script>
+</body>
+</html>
