@@ -1,4 +1,2 @@
 fastapi
 uvicorn
-picamera2
-opencv-python
