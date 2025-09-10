@@ -5,7 +5,16 @@ import os
 from picamera2 import Picamera2
 
 picam = Picamera2()
+
+# Use the "still" configuration for better color
+config = picam.create_still_configuration()
+picam.configure(config)
+
 picam.start()
+
+# Enable automatic controls
+picam.set_controls({"AwbEnable": True, "AeEnable": True})
+
 
 app = FastAPI()
 
