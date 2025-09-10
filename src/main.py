@@ -14,7 +14,7 @@ picam.start()
 
 # Enable automatic controls
 picam.set_controls({"AwbEnable": True, "AeEnable": True})
-
+picam.set_controls({"AwbMode": 1})
 
 app = FastAPI()
 
